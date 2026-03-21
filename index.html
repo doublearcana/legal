@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Arcane Double</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+    p, li { font-size: 0.97em; }
+    a { color: #2a6496; }
+    .date { color: #666; font-size: 0.9em; margin-bottom: 2em; }
+    footer { margin-top: 3em; font-size: 0.85em; color: #888; border-top: 1px solid #eee; padding-top: 1em; }
+  </style>
+</head>
+<body>
+
+<h1>Politique de confidentialité</h1>
+<p class="date">Dernière mise à jour : 21 mars 2026</p>
+
+<p>
+  Arcane Double (« l'Application ») est une application mobile d'aide à l'interprétation
+  de tirages de Tarot et de Yi Jing, développée par DoubleArcana. Cette politique décrit
+  quelles données sont collectées, pourquoi, et comment elles sont protégées.
+</p>
+
+<h2>1. Données collectées</h2>
+
+<p><strong>a) Journal des tirages</strong></p>
+<p>
+  L'Application enregistre sur votre appareil les tirages que vous choisissez de sauvegarder
+  (cartes tirées, question posée, interprétation saisie). Si vous créez un compte et activez
+  la sauvegarde distante, ces données sont également stockées sur nos serveurs hébergés chez
+  Supabase (infrastructure cloud sécurisée, données hébergées en Europe). Vous pouvez
+  désactiver la sauvegarde distante ou demander la suppression de vos données à tout moment.
+</p>
+
+<p><strong>b) Microphone (reconnaissance vocale)</strong></p>
+<p>
+  Si vous utilisez la saisie vocale pour formuler votre question, l'Application utilise le
+  service de reconnaissance vocale natif de votre appareil Android (Google Speech Services).
+  L'audio est traité par ce service tiers selon sa propre politique de confidentialité.
+  Arcane Double ne stocke pas et n'enregistre pas l'audio.
+</p>
+
+<p><strong>c) Oracle IA — envoi à l'API Anthropic</strong></p>
+<p>
+  Lorsque vous sollicitez l'Oracle IA, le texte de votre question, la liste des cartes tirées
+  et le contexte du tirage sont transmis à l'API d'Anthropic pour générer une interprétation.
+  Ces données sont soumises à la
+  <a href="https://www.anthropic.com/privacy" target="_blank">politique de confidentialité d'Anthropic</a>.
+  Arcane Double ne transmet que les données strictement nécessaires à la génération de
+  l'interprétation.
+</p>
+
+<p><strong>d) Données de compte et d'abonnement</strong></p>
+<p>
+  Lors de la création d'un compte, votre adresse e-mail et un mot de passe (stocké de façon
+  chiffrée) sont collectés. Ces données sont nécessaires à l'authentification et à la gestion
+  de votre abonnement. Elles sont hébergées chez Supabase. Les données de paiement sont gérées
+  exclusivement par Google Play Billing ; Arcane Double n'a pas accès à vos informations
+  bancaires.
+</p>
+
+<h2>2. Utilisation des données</h2>
+<p>Les données collectées sont utilisées uniquement pour :</p>
+<ul>
+  <li>Le bon fonctionnement de l'Application (sauvegarde du journal)</li>
+  <li>La génération d'interprétations par l'Oracle IA</li>
+  <li>La gestion de votre compte et de votre abonnement</li>
+</ul>
+<p>Aucune donnée personnelle n'est vendue, louée ou cédée à des tiers à des fins commerciales.</p>
+
+<h2>3. Conservation et suppression</h2>
+<p>
+  Les données du journal sont stockées localement sur votre appareil. Si vous activez la
+  sauvegarde distante, une copie est conservée sur nos serveurs tant que votre compte est actif.
+  Vous pouvez demander la suppression de l'ensemble de vos données (compte + journal) à tout
+  moment en nous contactant à l'adresse indiquée ci-dessous ou via la fonction de suppression
+  de compte dans l'Application. Nous procéderons à la suppression dans un délai de 30 jours.
+</p>
+
+<h2>4. Sécurité</h2>
+<p>
+  Les communications entre l'Application et les services tiers (Anthropic, Supabase, Google)
+  sont chiffrées via HTTPS/TLS. Les mots de passe sont stockés sous forme hachée et ne sont
+  jamais accessibles en clair.
+</p>
+
+<h2>5. Services tiers</h2>
+<p>L'Application fait appel aux services tiers suivants, chacun soumis à sa propre politique de confidentialité :</p>
+<ul>
+  <li><a href="https://www.anthropic.com/privacy" target="_blank">Anthropic</a> — Oracle IA</li>
+  <li><a href="https://supabase.com/privacy" target="_blank">Supabase</a> — Authentification et sauvegarde cloud</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Billing</a> — Paiements et abonnements</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank">Google Speech Services</a> — Reconnaissance vocale</li>
+</ul>
+
+<h2>6. Modifications</h2>
+<p>
+  Cette politique peut être mise à jour. La date de dernière mise à jour est indiquée en haut
+  de page. L'utilisation continue de l'Application après modification vaut acceptation.
+</p>
+
+<h2>7. Contact</h2>
+<p>
+  Pour toute question relative à vos données personnelles ou pour exercer vos droits
+  (accès, rectification, suppression) :<br>
+  <strong>DoubleArcana</strong> — <a href="mailto:contact@doublearcana.com">contact@doublearcana.com</a>
+</p>
+
+<footer>
+  &copy; 2026 DoubleArcana — Arcane Double
+</footer>
+
+</body>
+</html>
