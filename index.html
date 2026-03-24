@@ -24,7 +24,7 @@
 <body>
 
 <h1>Politique de confidentialité</h1>
-<p class="date">Dernière mise à jour : 21 mars 2026</p>
+<p class="date">Dernière mise à jour : 24 mars 2026</p>
 
 <p>
   Arcane Double (« l'Application ») est une application mobile d'aide à l'interprétation
@@ -55,19 +55,41 @@
 <p>
   Lorsque vous sollicitez l'Oracle IA, le texte de votre question, la liste des cartes tirées
   et le contexte du tirage sont transmis à l'API d'Anthropic pour générer une interprétation.
-  Ces données sont soumises à la
+  Ce transfert s'effectue via un service proxy sécurisé (Edge Function hébergée chez Supabase) ;
+  la clé d'accès à l'API Anthropic n'est jamais exposée dans l'Application. Ces données sont
+  soumises à la
   <a href="https://www.anthropic.com/privacy" target="_blank">politique de confidentialité d'Anthropic</a>.
   Arcane Double ne transmet que les données strictement nécessaires à la génération de
   l'interprétation.
 </p>
 
-<p><strong>d) Données de compte et d'abonnement</strong></p>
+<p><strong>d) Données de compte et d'authentification</strong></p>
 <p>
   Lors de la création d'un compte, votre adresse e-mail et un mot de passe (stocké de façon
-  chiffrée) sont collectés. Ces données sont nécessaires à l'authentification et à la gestion
-  de votre abonnement. Elles sont hébergées chez Supabase. Les données de paiement sont gérées
-  exclusivement par Google Play Billing ; Arcane Double n'a pas accès à vos informations
-  bancaires.
+  chiffrée) sont collectés. Vous pouvez également vous connecter via votre compte Google
+  (Google Sign-In) ; dans ce cas, Google transmet à l'Application votre adresse e-mail et
+  votre nom d'affichage, conformément à la
+  <a href="https://policies.google.com/privacy" target="_blank">politique de confidentialité de Google</a>.
+  Ces données sont hébergées chez Supabase et utilisées uniquement pour l'authentification et
+  la gestion de votre abonnement. Les données de paiement sont gérées exclusivement par
+  Google Play Billing ; Arcane Double n'a pas accès à vos informations bancaires.
+</p>
+
+<p><strong>e) Identifiant appareil anonyme</strong></p>
+<p>
+  Pour les utilisateurs non connectés, l'Application génère un identifiant technique anonyme
+  propre à votre appareil (UUID). Cet identifiant est utilisé uniquement pour comptabiliser le
+  quota d'utilisations gratuites de l'Oracle IA. Il ne permet pas d'identifier personnellement
+  un utilisateur et n'est associé à aucune autre donnée.
+</p>
+
+<p><strong>f) Journaux d'erreurs techniques</strong></p>
+<p>
+  En version de production, l'Application transmet à nos serveurs Supabase des journaux
+  techniques limités (erreurs et avertissements) afin de détecter et corriger les
+  dysfonctionnements. Ces journaux contiennent des informations techniques sur l'erreur
+  (type, message, horodatage) et ne contiennent pas de données personnelles identifiantes ni
+  le contenu de vos tirages.
 </p>
 
 <h2>2. Utilisation des données</h2>
@@ -76,6 +98,8 @@
   <li>Le bon fonctionnement de l'Application (sauvegarde du journal)</li>
   <li>La génération d'interprétations par l'Oracle IA</li>
   <li>La gestion de votre compte et de votre abonnement</li>
+  <li>La limitation du quota d'utilisations gratuites (identifiant anonyme)</li>
+  <li>La détection et la correction de dysfonctionnements (journaux d'erreurs techniques)</li>
 </ul>
 <p>Aucune donnée personnelle n'est vendue, louée ou cédée à des tiers à des fins commerciales.</p>
 
@@ -83,25 +107,28 @@
 <p>
   Les données du journal sont stockées localement sur votre appareil. Si vous activez la
   sauvegarde distante, une copie est conservée sur nos serveurs tant que votre compte est actif.
-  Vous pouvez demander la suppression de l'ensemble de vos données (compte + journal) à tout
-  moment en nous contactant à l'adresse indiquée ci-dessous ou via la fonction de suppression
-  de compte dans l'Application. Nous procéderons à la suppression dans un délai de 30 jours.
+  Vous pouvez supprimer l'ensemble de vos données (compte + journal) à tout moment directement
+  depuis l'Application via la fonction « Supprimer mon compte » (menu Mon compte). La suppression
+  est effective immédiatement et irréversible. Vous pouvez également nous contacter à l'adresse
+  ci-dessous pour exercer ce droit.
 </p>
 
 <h2>4. Sécurité</h2>
 <p>
   Les communications entre l'Application et les services tiers (Anthropic, Supabase, Google)
   sont chiffrées via HTTPS/TLS. Les mots de passe sont stockés sous forme hachée et ne sont
-  jamais accessibles en clair.
+  jamais accessibles en clair. Les appels à l'API Anthropic transitent par un proxy sécurisé
+  qui ne conserve pas les données transmises.
 </p>
 
 <h2>5. Services tiers</h2>
 <p>L'Application fait appel aux services tiers suivants, chacun soumis à sa propre politique de confidentialité :</p>
 <ul>
-  <li><a href="https://www.anthropic.com/privacy" target="_blank">Anthropic</a> — Oracle IA</li>
-  <li><a href="https://supabase.com/privacy" target="_blank">Supabase</a> — Authentification et sauvegarde cloud</li>
+  <li><a href="https://www.anthropic.com/privacy" target="_blank">Anthropic</a> — Oracle IA (interprétation des tirages)</li>
+  <li><a href="https://supabase.com/privacy" target="_blank">Supabase</a> — Authentification, sauvegarde cloud et journaux techniques</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank">Google Sign-In</a> — Authentification via compte Google (optionnelle)</li>
   <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Billing</a> — Paiements et abonnements</li>
-  <li><a href="https://policies.google.com/privacy" target="_blank">Google Speech Services</a> — Reconnaissance vocale</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank">Google Speech Services</a> — Reconnaissance vocale (optionnelle)</li>
 </ul>
 
 <h2>6. Modifications</h2>
