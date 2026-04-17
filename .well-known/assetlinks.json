@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.francoisboyer.tarologique",
+      "sha256_cert_fingerprints": [
+        "FF:A7:65:6A:A7:27:62:A6:81:E4:3A:23:D0:D7:B2:27:FD:92:D0:E0:B5:C7:F8:71:E4:E1:36:AD:18:96:DB:AD"
+      ]
+    }
+  }
+]
